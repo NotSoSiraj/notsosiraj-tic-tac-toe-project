@@ -2,21 +2,30 @@ $green: #12e177;
 $orange: #ffc72a;
 $blue: #4c43d4;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: $blue;
-  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  background-color: #d6fc15;
+  color: #000;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: 113vh;
   display: flex;
   box-sizing: border-box;
   justify-content: center;
-  padding-top: 100px;
+}
+
+.chota {
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -66,7 +75,7 @@ button {
       }
 
       .btn-move {
-    	  color: #fff;
+        color: #fff;
         &.active {
           font-weight: bold;
           color: $green;
@@ -75,16 +84,56 @@ button {
     }
   }
 }
-
+#text {
+  color: #12e177 !important;
+}
 .status-message {
-	margin-bottom: 30px;
-	font-size: 1.2rem;
-	font-weight: lighter;
-	span {
-	  font-weight: normal;
-	}
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  display: block;
+  font-weight: lighter;
+  padding: 9px;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  .text {
+    font-weight: normal;
+    color: #d6fc15 !important;
+  }
 }
 
+.Reset {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  display: block;
+  font-weight: lighter;
+  padding: 11px 38px;
+  margin-top: 13px;
+  background: white;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.Reset:hover {
+  transform: scale(1.1);
+}
+.green {
+  color: #d6fc15;
+}
+
+.win {
+  color: #d6fc15;
+}
+.app h2 {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 23px;
+}
 .btn-reset {
   font-size: 0.8rem;
   color: #fff;
@@ -109,34 +158,42 @@ button {
       border-bottom: none;
     }
     .square {
-      width: 80px;
-      height: 80px;
+      width: 96px;
+      height: 88px;
       border-right: 2px solid #fff;
-      font-size: 2.5rem;
+      font-size: 4rem;
+      color: white;
       padding: 0;
+      font-weight: 900;
       overflow: hidden;
       transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
       &:last-child {
         border-right: none;
       }
       &.winning {
-	    animation: scaleText 1.4s infinite;
-	    @keyframes scaleText {
-	      0% {
-	        transform: 2.5rem;
-	      }
-	      50% {
-	        font-size: 3.5rem;
-	      }
-	      100% {
-	        font-size: 2.5rem;
-	      }
-	    }
-	  }
+        animation: scaleText 1.4s infinite;
+        @keyframes scaleText {
+          0% {
+            transform: 2.5rem;
+          }
+          50% {
+            font-size: 3.5rem;
+          }
+          100% {
+            font-size: 2.5rem;
+          }
+        }
+      }
     }
   }
 }
 
+.board {
+  background-color: #000;
+  padding: 39px 46px 36px 48px;
+  border-radius: 55px;
+}
 
 .bg-balls {
   position: fixed;
@@ -180,3 +237,11 @@ button {
     }
   }
 }
+
+@media only screen and (max-width: 388px) {
+  .board {
+    border-radius: 41px;
+    padding: 13px;
+}
+  }
+
