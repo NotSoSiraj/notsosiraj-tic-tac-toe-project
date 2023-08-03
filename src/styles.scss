@@ -10,6 +10,15 @@ body {
   margin: 0;
 }
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-top: 100px;
+}
+
 button {
   background: none;
   border: none;
@@ -127,6 +136,11 @@ button {
     }
   }
 }
+
+.board {
+  width: 18%;
+}
+
 
 .bg-balls {
   position: fixed;
